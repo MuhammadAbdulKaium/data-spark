@@ -50,7 +50,7 @@ const Index = () => {
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       // Small delay so Google Sheet has time to reflect the changes
-      await new Promise((r) => setTimeout(r, 1500));
+      await new Promise((r) => setTimeout(r, 10000));
       setIframeKey((k) => k + 1);
       setLastAction(action);
       toast.success(`${label} completed`, {
