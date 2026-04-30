@@ -31,7 +31,7 @@ const ACTIONS = [
   { label: "Detect Duplicates", action: "detect_duplicates", icon: Copy },
   { label: "Fill Missing", action: "fill_missing", icon: Wand2 },
   { label: "Run All", action: "run_all", icon: PlayCircle, primary: true },
-] as const;
+] as Array<{ label: string; action: string; icon: typeof User; primary?: boolean }>;
 
 const Index = () => {
   const [loading, setLoading] = useState<string | null>(null);
